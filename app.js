@@ -17,11 +17,12 @@ class Creature {
 }
 // Create Dino Constructor
 class Dino extends Creature {
-  constructor(species, weight, height, diet, where, when, fact) {
+  constructor(species, weight, height, diet, where, when, fact, cardColor) {
     super(species, weight, height, diet);
     this.where = where;
     this.when = when;
     super.fact = fact;
+    this.cardColor = cardColor;
   }
 }
 
@@ -127,7 +128,8 @@ function startMotor() {
           dino.diet,
           dino.where,
           dino.when,
-          dino.fact
+          dino.fact,
+          dino.cardColor
         )
     );
 
@@ -148,10 +150,14 @@ function startMotor() {
         humanDiet
       );
       humanObject.fact = "You are human.";
+      humanObject.cardColor = "#67a866f9";
 
       //   console.log(humanObject);
       return humanObject;
     })();
+
+    //randomize tiles in the grid
+    dinoArr.sort(() => Math.random() - 0.5);
 
     //add human into dino array
     dinoArr.splice(4, 0, human);
@@ -162,6 +168,8 @@ function startMotor() {
       // Generate Tiles for each Dino in Array
       const tile = document.createElement("div");
       tile.classList.add("grid-item");
+      //set card color
+      tile.style.background = dino.cardColor;
 
       const name = document.createElement("h3");
       const image = document.createElement("img");

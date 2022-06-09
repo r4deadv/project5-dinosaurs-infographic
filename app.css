@@ -55,6 +55,8 @@ p {
   width: 100%;
 }
 
+/* tile colors moved to app.js
+
 .grid-item:nth-child(1) {
   background: #009687f5;
 }
@@ -90,6 +92,7 @@ p {
 .grid-item:nth-child(9) {
   background: #677bcbfa;
 }
+*/
 
 @media (min-width: 550px) {
   #grid div {
