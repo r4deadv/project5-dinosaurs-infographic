@@ -206,4 +206,5 @@ function startMotor() {
   });
 }
 
-//set form fields as required
+//click event replaced with onsubmit event
+// document.getElementById("btn").addEventListener("click", startMotor);
