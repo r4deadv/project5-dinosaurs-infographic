@@ -178,7 +178,7 @@ function startMotor() {
       if (dino.species === "Pigeon") {
         fact.innerText = "All birds are Dinosaurs";
       } else if (index === 4) {
-        fact.innerText = human.fact;
+        fact.innerText = "";
       } else {
         fact.innerText = randomFact(
           dino.species,
